@@ -9,6 +9,7 @@ import { Espaciador } from './Components/Espaciador/Espaciador';
 import { Login } from './Pages/Login';
 import { Signup } from './Pages/Signup';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import { Carrito } from './Pages/Carrito';
 
 
 
@@ -24,6 +25,7 @@ function App() {
             <Route path='/ProductsList' element={<ProductsList/>}/> 
             <Route path='/Login' element={<Login/>}/>
             <Route path='/Signup' element={<Signup/>}/> 
+            <Route path='/Carrito' element={<Carrito/>}/> 
             <Route path='*' element={<Error404/>}/>    
           </Routes>
           <Footer/>
