@@ -3,6 +3,7 @@ import silla1 from "../../assets/silla1.png";
 import silla2 from "../../assets/silla2.png";
 import silla3 from "../../assets/silla3.png";
 import silla4 from "../../assets/silla4.png";
+import { Link } from "react-router-dom";
 
 const ProductosPopulares = () => {
   return (
@@ -71,7 +72,7 @@ const ProductosPopulares = () => {
       </div>
 
       <div className="my-10">
-        <a className="cursor-pointer px-6 py-2 rounded-lg bg-anotherBlack text-white hover:text-black hover:bg-gray-500 active:text-red-700">Ver todos los productos</a>
+        <Link to="/ProductsList" className="cursor-pointer px-6 py-2 rounded-lg bg-anotherBlack text-white hover:text-black hover:bg-gray-500 active:text-red-700">Ver todos los productos</Link>
       </div>
     </div>
   );

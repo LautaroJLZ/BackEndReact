@@ -42,10 +42,10 @@ const Navbar = () => {
                   } flex-col absolute  rounded-b-lg left-0 bg-white right-22 mx-auto top-10 w-72 trasition-all ease-in duration-500   lg:flex lg:flex-row lg:gap-12 lg:font-light lg:static`}
                 >
                   <li className="p-2 mb-5  hover:bg-slate-200 active:bg-slate-400 rounded-lg lg:mb-0">
-                    <a href="#inicio">Inicio</a>
+                    <Link to="/">Inicio</Link>
                   </li>
                   <li className="p-2 mb-5  hover:bg-slate-200 active:bg-slate-400 rounded-lg lg:mb-0">
-                    <a href="#productos">Productos</a>
+                    <Link to="/ProductsList">Productos</Link>
                   </li>
                   <li className="p-2 mb-5 hover:bg-slate-200 active:bg-slate-400 rounded-lg lg:mb-0">
                     <a href="#nuevos">Nuevos</a>
@@ -85,12 +85,12 @@ const Navbar = () => {
                 </div>
 
                 <div className=" hidden md:flex md:gap-3 ">
-                  <button className="p-2 rounded-lg hover:bg-slate-200 active:bg-slate-400">
+                  <Link to="/Signup" className="p-2 rounded-lg hover:bg-slate-200 active:bg-slate-400">
                     Registrate
-                  </button>
-                  <button className="bg-anotherBlack hover:bg-anotherGray text-white rounded-xl w-28 p-2">
+                  </Link>
+                  <Link to="/Login" className="bg-anotherBlack hover:bg-anotherGray text-white rounded-xl w-28 p-2">
                     Iniciar Sesion
-                  </button>
+                  </Link>
                 </div>
                 <div className="md:hidden">
                   <button>

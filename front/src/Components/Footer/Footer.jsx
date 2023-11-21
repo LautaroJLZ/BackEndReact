@@ -12,7 +12,7 @@ const Footer = () => {
               <a href="#">Como comprar</a>
             </li>
             <li className="hover:text-slate-200 pb-2">
-              <a href="#">Pagos</a>
+              <a href="#">Pagos</a> 
             </li>
             <li className="hover:text-slate-200 pb-2">
               <a href="#">Trasporte de carga </a>

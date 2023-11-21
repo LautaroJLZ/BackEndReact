@@ -27,4 +27,3 @@ const Detalles = ({dato}) => {
 }
 
 export { Detalles }
-

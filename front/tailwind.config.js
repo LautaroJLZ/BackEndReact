@@ -21,7 +21,10 @@ module.exports = {
       },
       backgroundImage: {
         'living': "url('../src/assets/living.png')",
-      }
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],
