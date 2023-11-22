@@ -68,8 +68,8 @@ const ProductsList = () => {
 
   // Renderizar tu componente con los datos
   return (
-    <div className='w-[90%] my-10'>
-      <div className='flex flex-wrap gap-5 justify-center'>
+    <div className='w-[90%] my-10 m-auto'>
+      <div className='flex flex-wrap gap-7 justify-center'>
         {datos &&
           datos.map((dato) => (
             <div key={dato._id}>
