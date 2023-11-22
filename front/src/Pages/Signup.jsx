@@ -12,10 +12,6 @@ const Signup = () => {
                     <input className='rounded-lg bg-gray-300 mt-2 p-2 focus:border-blue-500 focus:bg-gray-600 focus:outline-none' type="text" />
                 </div>
                 <div className='flex flex-col text-black py-2 w-1/2'>
-                    <label className='text-base' htmlFor="">Email</label>
-                    <input className='rounded-lg bg-gray-300 mt-2 p-2 focus:border-blue-500 focus:bg-gray-600 focus:outline-none' type="text" />
-                </div>
-                <div className='flex flex-col text-black py-2 w-1/2'>
                     <label className='text-base' htmlFor="">Contraseña</label>
                     <input className='rounded-lg bg-gray-300 mt-2 p-2 focus:border-blue-500 focus:bg-gray-600 focus:outline-none' type="text" />
                 </div>
