@@ -10,7 +10,7 @@ app.use(express.json())
 const dbUrl = process.env.DB_URL
 
 
-app.use('/miapi/pepe/',rutas)
+app.use('/miapi/pepe',rutas)
 const PORT = process.env.PORT
 
 mongoose.connect(dbUrl)
