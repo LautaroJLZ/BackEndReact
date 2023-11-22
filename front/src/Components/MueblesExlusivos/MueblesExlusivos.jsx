@@ -13,20 +13,20 @@ const MueblesExlusivos = () => {
             </div>
             <div className='flex gap-5 justify-center flex-wrap'>
                 <div className='w-[260px] h-[390px] text-center p-5 text-sm'>
-                    <img src={LR} alt="Living Room" className='rounded-md w-full h-full' />
-                    <p className='font-bold mt-3'>Sala de estar</p>
+                    <img src={LR} alt="Living Room" className='rounded-md w-full h-full transition-transform transform hover:scale-105 duration-500 ease-in-out' />
+                    <p className='mt-3'>Sala de estar</p>
                 </div>
                 <div className='w-[260px] h-[390px] text-center p-5 text-sm'>
-                    <img src={BR} alt="Bedroom" className='rounded-md w-full h-full' />
-                    <p className='font-bold mt-3'>Dormitorio</p>
+                    <img src={BR} alt="Bedroom" className='rounded-md w-full h-full transition-transform transform hover:scale-105 duration-500 ease-in-out' />
+                    <p className='mt-3'>Dormitorio</p>
                 </div>
                 <div className='w-[260px] h-[390px] text-center p-5 text-sm'>
-                    <img src={WS} alt="WorkSpace" className='rounded-md w-full h-full' />
-                    <p className='font-bold mt-3'>Espacio de Trabajo</p>
+                    <img src={WS} alt="WorkSpace" className='rounded-md w-full h-full transition-transform transform hover:scale-105 duration-500 ease-in-out' />
+                    <p className='mt-3'>Espacio de Trabajo</p>
                 </div>
                 <div className='w-[260px] h-[390px] text-center p-5 text-sm'>
-                    <img src={KC} alt="Kitchen" className='rounded-md w-full h-full' />
-                    <p className='font-bold mt-3'>Cocina</p>
+                    <img src={KC} alt="Kitchen" className='rounded-md w-full h-full transition-transform transform hover:scale-105 duration-500 ease-in-out' />
+                    <p className='mt-3'>Cocina</p>
                 </div>
             </div>
         </div>

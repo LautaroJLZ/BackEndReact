@@ -10,7 +10,7 @@ const Ofertas = () => {
       <div className="block md:flex py-10">
         <div className="w-full md:w-[50%] h-full flex justify-start my-5">
           <div className="flex justify-center items-center w-[90%] h-full ">
-            <img src={sofa1} alt="" className="w-full rounded-2xl" />
+            <img src={sofa1} alt="" className="w-full rounded-2xl transition-transform transform hover:scale-105 duration-500 ease-in-out" />
           </div>
         </div>
 
@@ -24,7 +24,7 @@ const Ofertas = () => {
               nuestros productos, por lo que nos convertimos en el número 1 en
               muebles...
             </p>
-            <button className=" border-2 border-anotherGray text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
+            <button className=" border-2 border-gray-400 text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
               Leer más
             </button>
           </div>
@@ -42,7 +42,7 @@ const Ofertas = () => {
               Más de 10.000 productos interesantes que vendemos aquí y, por
               supuesto, con una buena calidad media...
             </p>
-            <button className="border-2 border-anotherGray text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
+            <button className="border-2 border-gray-400 text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
               Leer más
             </button>
           </div>
@@ -50,7 +50,7 @@ const Ofertas = () => {
 
         <div className="w-full md:w-[50%] h-full flex justify-start my-5 order-1 md:order-2">
           <div className="flex justify-center items-center w-[90%] h-full  ">
-            <img src={sofa2} alt="" className="w-full rounded-2xl" />
+            <img src={sofa2} alt="" className="w-full rounded-2xl transition-transform transform hover:scale-105 duration-500 ease-in-out" />
           </div>
         </div>
 
@@ -59,7 +59,7 @@ const Ofertas = () => {
       <div className="block md:flex py-10">
         <div className="w-full md:w-[50%] h-full flex justify-start my-5">
           <div className="flex justify-center items-center w-[90%] h-full ">
-            <img src={sofa3} alt="" className="w-full rounded-2xl" />
+            <img src={sofa3} alt="" className="w-full rounded-2xl transition-transform transform hover:scale-105 duration-500 ease-in-out" />
           </div>
         </div>
         <div className="w-full md:w-[50%] flex justify-center my-5">
@@ -68,10 +68,10 @@ const Ofertas = () => {
               Muchos accesorios para embellecer tu habitación.
             </p>
             <p className="pb-14">
-              muchos accesorios interesantes para embellecer tu habitación,
+              Muchos accesorios interesantes para embellecer tu habitación,
               accesorios de varios países...
             </p>
-            <button className="border-2 border-anotherGray text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
+            <button className="border-2 border-gray-400 text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
               Leer más
             </button>
           </div>
@@ -85,10 +85,10 @@ const Ofertas = () => {
               Vendemos productos de la mejor calidad del mercado.
             </p>
             <p className="pb-14">
-              vendemos productos de la mejor calidad del mercado, y es por eso
+              Vendemos productos de la mejor calidad del mercado, y es por eso
               que muchos prefieren nuestros productos sobre otros...
             </p>
-            <button className="border-2 border-anotherGray text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
+            <button className="border-2 border-gray-400 text-anotherGray rounded-md py-1 px-10 font-bold hover:bg-gray-400">
               Leer más
             </button>
           </div>
@@ -96,7 +96,7 @@ const Ofertas = () => {
 
         <div className="w-full md:w-[50%] h-full flex justify-start my-5 order-1 md:order-2">
           <div className="flex justify-center items-center w-[90%] h-full ">
-            <img src={sofa4} alt="" className="w-full rounded-2xl" />
+            <img src={sofa4} alt="" className="w-full rounded-2xl transition-transform transform hover:scale-105 duration-500 ease-in-out" />
           </div>
         </div>
 
