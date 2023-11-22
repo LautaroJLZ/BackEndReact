@@ -17,11 +17,11 @@ const ProductsList = () => {
     },[])
     return(
         
-        <div className='min-h-screen'>
-            <div className='flex justify-evenly flex-wrap'>
+        <div className='w-[90%] my-10'>
+            <div className='flex flex-wrap gap-5 justify-center '>
                     {datos &&  datos.map(dato=>(
                     <div>
-                        <div>
+                        <div >
                             <Detalles dato={dato} key={dato._id} />
                         </div>
                     </div>

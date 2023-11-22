@@ -6,15 +6,11 @@ import { CaracteristicasEspeciales } from '../Components/CaracteristicasEspecial
 import { Ofertas } from '../Components/Ofertas/Ofertas';
 import { ProductosPopulares } from '../Components/ProductosPopulares/ProductosPopulares';
 import  CardSlider  from '../Components/CardSlider/CardSlider';
-// import { Navbar } from '../Components/Home/Navbar';
-// import { Footer } from '../Components/Footer/Footer';
-// import { ProductsList } from './ProductsList';
 
 const Inicio = () => {
     
     return(
             <div>
-                {/* <Navbar/> */}
                 <Espaciador/>
                 <SeccionHome/>
                 <Espaciador/>
@@ -22,9 +18,7 @@ const Inicio = () => {
                 <CaracteristicasEspeciales/>
                 <Ofertas/>
                 <ProductosPopulares/>
-                {/* <ProductsList/> */}
                 <CardSlider/>
-                {/* <Footer/> */}
             </div>
         )
 }

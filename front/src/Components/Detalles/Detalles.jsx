@@ -4,25 +4,27 @@ import './Detalles'
 
 const Detalles = ({dato}) => {
     return(
-    <div className="w-[90%] m-auto items-center text-center" id="productos">
-            <div className="text-start">
-                <div className="w-full block md:flex md:justify-evenly md:flex-wrap">
-                    <div className=" flex flex-col items-center">
-                        <div className="">
-                            <img src={dato.imagen} alt="Silla 1" />
-                        </div>
-                        <div className="">
-                            <p className="font-extralight text-sm">{dato.nombre}</p>
-                            <p className="font-bold">{dato.marca}</p>
-                            <div className="flex space-x-2">
-                            <p className="line-through">{dato.oferta}</p>
-                            <p className="font-bold">${dato.precio}</p>
+        <div className='border border-gray-300 rounded-lg shadow-md hover:shadow-2xl transition-all overflow-hidden'>
+            <ol>
+                <li>
+                    <div className='flex justify-center'>
+                        <div className='w-[284px] h-[427px]'>
+                            <div className='object-center'>
+                                <img src={dato.imagen} alt="mueble" className='w-[284px] h-[285px]'/>
+                            </div>
+                            <div className='w-[284px] h-[142px] p-5'>
+                                <p className="font-extralight text-xs">{dato.nombre}</p>
+                                <p className="font-bold text-lg">{dato.marca}</p>
+                                <div className="flex space-x-2">
+                                    <p className="line-through text-xl">{dato.oferta}</p>
+                                    <p className="font-bold text-xl">${dato.precio}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>    
-</div> 
+                </li>
+            </ol>
+        </div>
     )
 }
 
