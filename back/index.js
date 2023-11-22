@@ -1,13 +1,15 @@
 require('dotenv').config()
 const express = require('express')
-
 const app=express()
 const mongoose=require('mongoose')
 const rutas=require('./routes/routes')
+const cors = require('cors');
 
 
 app.use(express.json())
 const dbUrl = process.env.DB_URL
+
+app.use(cors());
 
 
 app.use('/miapi/pepe',rutas)
