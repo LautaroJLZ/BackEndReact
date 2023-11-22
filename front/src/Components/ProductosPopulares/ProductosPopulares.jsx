@@ -33,7 +33,7 @@ const ProductosPopulares = () => {
           <div className="my-10 flex justify-center">
         <Link
           to="/ProductsList"
-          className="cursor-pointer px-6 py-2 rounded-lg bg-anotherBlack text-white hover:text-black hover:bg-gray-500 active:text-red-700"
+          className="cursor-pointer px-6 py-2 rounded-lg bg-anotherBlack text-white hover:text-black hover:bg-gray-400 active:text-red-700"
         >
           Ver todos los productos
         </Link>
