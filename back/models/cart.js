@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const productoEsquema = new Schema({
+const cartEsquema = new Schema({
   imagen: {
     type: String,
     required: true,
@@ -23,10 +23,10 @@ const productoEsquema = new Schema({
     type: String,
     required: false,
   },
-  incart: {
-    type: Boolean,
-    default: false,
+  amount: {
+    type: Number,
+    required: true,
   },
 });
 
-module.exports = mongoose.model("productos", productoEsquema);
+module.exports = mongoose.model("cart", cartEsquema);
