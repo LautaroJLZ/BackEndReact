@@ -19,6 +19,14 @@
 //     console.log(error)
 // })
 
+//--------------------------------------
+import cookieParser from 'cookie-parser'
+import taskRoute from './routes/task.routes.js'
+
+app.use("/api", taskRoute);
+app.use(cookieParser());
+//----------------------------------
+
 
 require('dotenv').config();
 const express = require('express');
