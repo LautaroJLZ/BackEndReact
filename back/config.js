@@ -1,1 +1,1 @@
-export const SECRET_TOKEN = 'contraseña secreta'; 
+export const TOKEN_SECRET = 'some secret key'
