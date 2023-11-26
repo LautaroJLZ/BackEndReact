@@ -59,6 +59,10 @@ export const CartProvider = ({ children }) => {
       console.error("Error en la llamada a la API:", error);
     }
   };
+  useEffect(() => {
+    obtenerDatos();
+    getProductsCart();
+  }, []);
   const addItemToCart = async (dato) => {
     const { nombre, imagen, marca, oferta, precio } = dato;
 
@@ -144,10 +148,6 @@ export const CartProvider = ({ children }) => {
       console.error("Error en la operación de edición:", error);
     }
   };
-  useEffect(() => {
-    obtenerDatos();
-    getProductsCart();
-  }, []);
 
   // const addItemToCart = async (dato) => {
   //   const { nombre, imagen, marca, oferta, precio } = dato;
