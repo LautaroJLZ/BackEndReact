@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
       // Utiliza la URL de tu backend basada en el entorno
       const backendUrl =
         process.env.NODE_ENV === "development"
-          ? "http://localhost:3000"
+          ? "http://localhost:4000"
           : "https://back-end-project-react.onrender.com";
 
       // Hacer la llamada a la API utilizando la URL del backend
