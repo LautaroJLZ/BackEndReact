@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
+import { Carrito } from "../../Pages/Carrito";
+import CartContext from "../Contex/CartContex";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -16,6 +18,14 @@ const Navbar = () => {
   const hacerClick = () => {
     setCarrito((prevState) => !prevState);
   };
+  const [productsLength, setProductsLength] = useState(0);
+  const { cartItems } = useContext(CartContext);
+
+  useEffect(() => {
+    setProductsLength(
+      cartItems?.reduce((previous, current) => previous + current.amount, 0)
+    );
+  }, [cartItems]);
 
   return (
     <header>
@@ -70,25 +80,38 @@ const Navbar = () => {
                 "
                       onClick={hacerClick}
                     ></i>
+
+                    <div
+                      className={`absolute bottom-10 mx-6 text-xs text-white text-center w-4 rounded-full bg-gray-900 ${
+                        productsLength === 0 ? "hidden" : "visible"
+                      }`}
+                    >
+                      {productsLength}
+                    </div>
                     <ul
                       className={`
-                ${carrito ? "right-[-350px]" : "right-12"} 
-                flex flex-col absolute  justify-center items-center pb-8  rounded-b-lg   left-22 bg-white right-0 mx-auto top-20   w-72 trasition-all ease-in duration-500  `}
+                ${carrito ? "right-[-400px]" : "right-12"} 
+                flex flex-col absolute items-center  rounded-b-lg   left-18 bg-white right-0 mx-auto top-20   w-[380px] h-96 trasition-all ease-in duration-500 overflow-y-scroll `}
                     >
-                      <li className="mb-5">Carrito vacio</li>
-                      <button className="bg-anotherBlack hover:bg-anotherGray text-white rounded-xl w-28 p-2">
-                        Vaciar Carrito
-                      </button>
+                      <li className="mb-5 ">
+                        <Carrito />
+                      </li>
                     </ul>
                   </button>
                   <i className="md:hidden">|</i>
                 </div>
 
                 <div className=" hidden md:flex md:gap-3 ">
-                  <Link to="/Signup" className="p-2 rounded-lg hover:bg-slate-200 hover:delay-75 active:bg-slate-400">
+                  <Link
+                    to="/Signup"
+                    className="p-2 rounded-lg hover:bg-slate-200 hover:delay-75 active:bg-slate-400"
+                  >
                     Registrate
                   </Link>
-                  <Link to="/Login" className="bg-anotherBlack hover:bg-anotherGray hover:delay-75 text-white rounded-xl w-28 p-2">
+                  <Link
+                    to="/Login"
+                    className="bg-anotherBlack hover:bg-anotherGray hover:delay-75 text-white rounded-xl w-28 p-2"
+                  >
                     Iniciar Sesion
                   </Link>
                 </div>
