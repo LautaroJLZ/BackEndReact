@@ -34,11 +34,32 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  // const getProductsCart = async () => {
+  //   return await axios
+  //     .get("http://localhost:4000/miapi/pepe/productos-cart")
+  //     .then(({ data }) => setCartItems(data.productosCart))
+  //     .catch((error) => console.error(error));
+  // };
   const getProductsCart = async () => {
-    return await axios
-      .get("http://localhost:4000/miapi/pepe/productos-cart")
-      .then(({ data }) => setCartItems(data.productosCart))
-      .catch((error) => console.error(error));
+    try {
+      const backendUrl =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:4000"
+          : "https://back-end-project-react.onrender.com";
+  
+      const url = `${backendUrl}/miapi/pepe/productos-cart`;
+  
+      const response = await fetch(url);
+  
+      if (!response.ok) {
+        throw new Error(`Error al obtener datos: ${response.statusText}`);
+      }
+  
+      const data = await response.json();
+      setCartItems(data.productosCart);
+    } catch (error) {
+      console.error("Error en la llamada a la API:", error);
+    }
   };
 
   useEffect(() => {
