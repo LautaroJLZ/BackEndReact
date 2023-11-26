@@ -65,10 +65,13 @@ export const CartProvider = ({ children }) => {
   }, []);
   const addItemToCart = async (dato) => {
     const { nombre, imagen, marca, oferta, precio } = dato;
-
+  
+    // Set the base URL based on the environment
+    const baseURL = process.env.REACT_APP_API_URL || "http://localhost:4000";
+  
     try {
       const response = await fetch(
-        "http://localhost:4000/miapi/pepe/productos-cart",
+        `${baseURL}/miapi/pepe/productos-cart`,
         {
           method: "POST",
           headers: {
@@ -83,7 +86,7 @@ export const CartProvider = ({ children }) => {
           }),
         }
       );
-
+  
       if (!response.ok) {
         const errorMessage = await response.text();
         if (response.status === 400) {
@@ -114,7 +117,7 @@ export const CartProvider = ({ children }) => {
       // Error al realizar la solicitud
       console.error("Error desconocido al agregar producto al carrito", error);
     }
-  };
+  };  
   const editItemToCart = async (id, query, amount) => {
     try {
       const backendUrl =
