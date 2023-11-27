@@ -65,28 +65,26 @@ export const CartProvider = ({ children }) => {
   }, []);
   const addItemToCart = async (dato) => {
     const { nombre, imagen, marca, oferta, precio } = dato;
-  
-    // Set the base URL based on the environment
-    const baseURL = process.env.REACT_APP_API_URL || "http://localhost:4000";
-  
     try {
-      const response = await fetch(
-        `${baseURL}/miapi/pepe/productos-cart`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            nombre,
-            imagen,
-            marca,
-            oferta,
-            precio,
-          }),
-        }
-      );
-  
+      const backendUrl =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:4000"
+          : "https://back-end-project-react.onrender.com";
+
+      const response = await fetch(`${backendUrl}/miapi/pepe/productos-cart`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nombre,
+          imagen,
+          marca,
+          oferta,
+          precio,
+        }),
+      });
+
       if (!response.ok) {
         const errorMessage = await response.text();
         if (response.status === 400) {
@@ -117,7 +115,7 @@ export const CartProvider = ({ children }) => {
       // Error al realizar la solicitud
       console.error("Error desconocido al agregar producto al carrito", error);
     }
-  };  
+  };
   const editItemToCart = async (id, query, amount) => {
     try {
       const backendUrl =
